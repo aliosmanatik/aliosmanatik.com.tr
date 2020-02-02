@@ -39,7 +39,7 @@ strong{ color:#ad2f00}
 /* ============================= header ====================== */
 header{ height:70px;}
 
-#logo{ display:block; text-indent:-9999px; background:url(../images/magnet.png) 0 0 no-repeat; margin-top:20px; margin-left:-30px;width:140px; height:200px;}
+#logo{ display:block; text-indent:-9999px; background:url(../images/magnet.png) 0 0 no-repeat; margin-top:40px; margin-left:-240px;width:140px; height:200px;}
 .menu { float:right; padding-top:30px}
 #menu > li { float:left; margin-right:30px;position:relative;}
 #menu > li > a{ display:block; font:17px 'Asap', sans-serif; color:#fff; text-shadow:1px 1px rgba(0,0,0,.5)}
