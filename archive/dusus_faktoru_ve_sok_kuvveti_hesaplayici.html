@@ -1,0 +1,157 @@
+<!-- Bu sayfayý internetten kaydettiðim bir sayfadan çevirdim ancak 
+orjinal baðlantýyý bulamadýðým için referans olarak veremiyorum.  
+Düþme faktörü hesaplamasýndaki hatayý düzelttim ancak 
+þok kuvveti hesabý ile ilgili teorik bilgim olmadýðýndan olduðu gibi býraktým, 
+umarým iþinize yarar. -->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>Týrmanýþçýnýn þok kuvveti hesaplayýcýsý</title>
+
+<meta name="keywords" content="kaya týrmanýþý düþme faktörü hesaplama">
+<meta name="description" content="Bu hesaplayýcý ipin türüne, týrmanýcýnýn aðýrlýðýna, ve son emniyet noktasýna olan mesafeye göre týrmanýcýnýn karþýlayacaðý þok yükünü ve düþme faktörünü hesaplar.">
+<meta name="classification" content="outdoor, rekreasyon, spor, kaya týrmanýþý, daðcýlýk">
+<meta name="Robots" content="All, Index, Follow">
+<meta name="Revisit" content="30 days">
+<meta name="Rating" content="General">
+<meta name="Language" content="tr-tr">
+
+<style type="text/css"></style>
+
+</head>
+
+<body bgcolor="#FFDDEE" text="#000000" leftmargin="100" marginwidth="100">
+
+    <script language="JavaScript"><!--  eski tarayýcýlardan gizleme baþlangýcý
+
+function compute(form) {
+var agirlik=parseFloat(form.agirlik.value)
+var ip_boyu=parseFloat(form.ip_boyu.value)
+var son_emn=parseFloat(form.son_emn.value)
+form.d_fak.value=""
+form.sok_kuv.value=""
+
+if (form.birim_son_emn[0].checked==true) {
+   son_emn *= 0.3048
+}
+if (form.birim_ip_boyu[0].checked==true) {
+  ip_boyu *= 0.3048
+}
+if (form.birim_agirlik[0].checked==true) {
+    agirlik *= 0.45359237
+}
+if (son_emn>ip_boyu) {
+	alert("Açýk ip boyu, son emniyet noktasýna olan uzaklýktan az olamaz !!!") 
+}
+form.d_fak.value=(son_emn*2)/ip_boyu
+if (form.ip_turu[1].checked==true) {
+form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*4.5
+}
+else {
+form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*9
+}
+}
+// eski tarayýcýlardan gizleme sonu  -->
+</script>
+         
+<div align="center"> 
+        
+    <p><b>*** Týrmanýþçýnýn þok kuvveti hesaplayýcýsý ***</b></p>
+		 <div align="left">
+          <p><font face="Arial, Helvetica, sans-serif" size="2">
+		  Bu hesaplayýcý ipin türüne, týrmanýcýnýn aðýrlýðýna, ve son emniyet noktasýna olan mesafeye göre týrmanýcýnýn karþýlayacaðý þok yükünü ve düþüþ faktörünü hesaplar. 
+		  Düþüþ faktörü, düþüþ mesafesinin açýk ip mesafesine oranýdýr. 
+		  Þok kuvveti ise düþüþ faktörü, týrmanýþçýnýn aðýrlýðý ve kullanýlan ipin türü ile iliþkilidir. Dinamik ipler esneyerek þoku emme özellikleri sayesinde düþüþ anýnda týrmanýþçýnýn hissedeceði þoku önemli ölçüde azaltýrlar.
+		  </p><p>
+		  <ul>
+		  <li>Olasý en yüksek düþüþ faktörü <b>2</b>'dir; teorik olarak hiçbir ara emniyet noktasý olmaksýzýn doðurdan ana istasyonda düþmek demektir ki bu da ip üzerinde en çok gerilimi oluþturur. Kesinlikle müsade edilmemesi gereken bir durumdur !!! <br>
+		  <br>
+		  <li><b>1</b>'lik düþme faktörü orta seviyededir; teorik olarak ana istasyona kadar bir düþüþü temsil eder. Azami ölçüde kaçýnýlmalýdýr ! <br>
+		  <br>
+		  <li><b>1</b>'den küçük düþme faktörü hafif sayýlmaktadýr; görece en güvenli düþüþleri temsil eder. <br>
+		  </ul>
+		  <br>
+		  </font></p>
+          </div>
+		  <form name="evalform">
+            
+                <table border="2" cellpadding="2">
+                    <tbody><tr> 
+                      <td> 
+                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Aðýrlýk: 
+                          </font></b></div>                      </td>
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                        <input type="text" size="6" name="agirlik">
+                        </font></td>
+                      <td><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                        <input type="radio" name="birim_agirlik" value="1">
+                        Pounds<br>
+                        <input type="radio" name="birim_agirlik" value="2">
+                        Kilogram</font></b></td>
+                    </tr>
+                    <tr> 
+                      <td> 
+                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Açýk ip boyu:</font></b></div>                      </td>
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                        <input type="text" size="6" name="ip_boyu">
+                        </font></td>
+                      <td><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                        <input type="radio" name="birim_ip_boyu">
+                        Feet <br>
+                        <input type="radio" name="birim_ip_boyu" value="1">
+                        Metre </font></b></td>
+                    </tr>
+                    <tr> 
+                      <td> 
+                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Son emniyet noktasýna uzaklýk:</font></b></div>                      </td>
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                        <input type="text" size="6" name="son_emn">
+                        </font></td>
+                      <td><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                        <input type="radio" name="birim_son_emn">
+                        Feet <br>
+                        <input type="radio" name="birim_son_emn" value="1">
+                        Metre </font></b></td>
+                    </tr>
+                    <tr> 
+                      <td> 
+                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Ýpin cinsi: </font></b></div>                      </td>
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                        <input type="radio" name="ip_turu">
+                        Statik </font></td> 
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">   
+						<input type="radio" name="ip_turu" value="1">
+                        Dinamik </font></td>
+                    </tr>
+					<tr> 
+                      <td>
+					    <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Düþüþ faktörü:</font></b></td>
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                        <input type="text" size="6" name="d_fak">
+                        </font></td>
+						<td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                      <input type="button" value=" Hesapla " onclick="compute(this.form)">
+                      </font></td>
+                    </tr>
+                    <tr> 
+                      <td>
+					    <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Þok kuvveti (KN):</font></b></td>
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                        <input type="text" size="6" name="sok_kuv">
+                        </font></td>
+						<td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                      <input type="reset" value=" Temizle  ">
+                      </font></td>
+                    </tr>
+					
+                  </tbody></table>
+            </div></div></div>
+           
+</form>
+</center>
+    
+</body>
+</html>
