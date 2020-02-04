@@ -1,31 +1,50 @@
-<!-- Bu sayfayı internetten kaydettiğim bir sayfadan çevirdim ancak 
-orjinal bağlantıyı bulamadığım için referans olarak veremiyorum.  
-Düşme faktörü hesaplamasındaki hatayı düzelttim ancak 
-şok kuvveti hesabı ile ilgili teorik bilgim olmadığından olduğu gibi bıraktım, 
-umarım işinize yarar. -->
+<!-- Bu sayfayÄ± internetten kaydettiÄŸim bir sayfadan Ã§evirdim ancak 
+orjinal baÄŸlantÄ±yÄ± kaybettiÄŸim iÃ§in referans olarak veremiyorum.  
+DÃ¼ÅŸme faktÃ¶rÃ¼ hesaplamasÅŸndaki hatayÅŸ dÃ¼zelttim ancak 
+ÅŸok kuvveti hesabÄ± ile ilgili teorik bilgim olmadÄ±ÄŸÄ±ndan olduÄŸu gibi kullandÄ±m, 
+umarÄ±m iÅŸinize yarar. -->
 
 <!DOCTYPE html>
 
 <html>
 <head>
 
-<title>Tırmanışçının şok kuvveti hesaplayıcısı</title>
+<title>TÄ±rmanÄ±Ã¾Ã§Ä±nÄ±n ÅŸok kuvveti hesaplayÄ±cÄ±sÄ±</title>
+<meta name="Language" content="tr-tr">
+<meta charset="utf-8" >
 
-<meta name="keywords" content="kaya tırmanışı düşme faktörü hesaplama">
-<meta name="description" content="Bu hesaplayıcı ipin türüne, tırmanıcının ağırlığına, ve son emniyet noktasına olan mesafeye göre tırmanıcının karşılayacağı şok yükünü ve düşme faktörünü hesaplar.">
-<meta name="classification" content="outdoor, rekreasyon, spor, kaya tırmanışı, dağcılık">
+<meta name="keywords" content="kaya tÄ±rmanÄ±ÅŸÄ± dÃ¼ÅŸme faktÃ¶rÃ¼ hesaplama">
+<meta name="description" content="Bu hesaplayÄ±cÄ± ipin tÃ¼rÃ¼ne, tÄ±rmanÄ±cÄ±nÄ±n aÄŸÄ±rlÄ±ÄŸÄ±na, ve son emniyet noktasÄ±na olan mesafeye gÃ¶re tÄ±rmanÄ±cÄ±nÄ±n karÅŸÄ±layacaÄŸÄ± ÅŸok yÃ¼kÃ¼nÃ¼ ve dÃ¼ÅŸme faktÃ¶rÃ¼nÃ¼ hesaplar.">
+<meta name="classification" content="outdoor, rekreasyon, spor, kaya tÄ±rmanÄ±ÅŸÄ±, daÄŸcÄ±lÄ±k">
+
 <meta name="Robots" content="All, Index, Follow">
 <meta name="Revisit" content="30 days">
 <meta name="Rating" content="General">
-<meta name="Language" content="tr-tr">
 
-<style type="text/css"></style>
 
+<style type="text/css">
+   h1 {
+   color: #666666;
+   text-decoration:none;
+   text-align:center;
+   }
+   p {
+   font-family: 'Arial Narrow', Arial, sans-serif;
+   padding: 10px;
+   padding-left: 20px;
+   }
+   a {
+   margin-left: 20px;
+   color: #666666;
+   text-decoration:none;
+   text-align:center;
+   }   
+</style>
 </head>
 
 <body bgcolor="#FFDDEE" text="#000000" leftmargin="100" marginwidth="100">
 
-    <script language="JavaScript"><!--  eski tarayıcılardan gizleme başlangıcı
+    <script language="JavaScript"><!--  eski tarayÄ±cÄ±lardan gizleme baÅŸlangÄ±cÄ±
 
 function compute(form) {
 var agirlik=parseFloat(form.agirlik.value)
@@ -44,7 +63,7 @@ if (form.birim_agirlik[0].checked==true) {
     agirlik *= 0.45359237
 }
 if (son_emn>ip_boyu) {
-	alert("Açık ip boyu, son emniyet noktasına olan uzaklıktan az olamaz !!!") 
+	alert("AÃ§Ä±k ip boyu, son emniyet noktasÄ±na olan uzaklÄ±ktan az olamaz !!!") 
 }
 form.d_fak.value=(son_emn*2)/ip_boyu
 if (form.ip_turu[1].checked==true) {
@@ -54,24 +73,24 @@ else {
 form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*9
 }
 }
-// eski tarayıcılardan gizleme sonu  -->
+// eski tarayÄ±cÄ±lardan gizleme sonu  -->
 </script>
          
 <div align="center"> 
         
-    <p><b>*** Tırmanışçının şok kuvveti hesaplayıcısı ***</b></p>
+    <h1><b>*** TÄ±rmanÄ±ÅŸÃ§Ä±nÄ±n ÅŸok kuvveti hesaplayÄ±cÄ±sÄ± ***</b></h1>
 		 <div align="left">
-          <p><font face="Arial, Helvetica, sans-serif" size="2">
-		  Bu hesaplayıcı ipin türüne, tırmanıcının ağırlığına, ve son emniyet noktasına olan mesafeye göre tırmanıcının karşılayacağı şok yükünü ve düşüş faktörünü hesaplar. 
-		  Düşüş faktörü, düşüş mesafesinin açık ip mesafesine oranıdır. 
-		  Şok kuvveti ise düşüş faktörü, tırmanışçının ağırlığı ve kullanılan ipin türü ile ilişkilidir. Dinamik ipler esneyerek şoku emme özellikleri sayesinde düşüş anında tırmanışçının hissedeceği şoku önemli ölçüde azaltırlar.
+          <p><font face="Arial, Helvetica, sans-serif" size="3">
+		  Bu hesaplayÄ±cÄ± ipin tÃ¼rÃ¼ne, tÄ±rmanÄ±cÄ±nÄ±n aÄŸÄ±rlÄ±ÄŸÄ±na, ve son emniyet noktasÄ±na olan mesafeye gÃ¶re tÄ±rmanÄ±cÄ±nÄ±n karÅŸÄ±layacaÄŸÄ± ÅŸok yÃ¼kÃ¼nÃ¼ ve dÃ¼ÅŸÃ¼ÅŸ faktÃ¶rÃ¼nÃ¼ hesaplar. 
+		  DÃ¼ÅŸÃ¼ÅŸ faktÃ¶rÃ¼, dÃ¼ÅŸÃ¼ÅŸ mesafesinin aÃ§Ä±k ip mesafesine oranÄ±dÄ±r. 
+		  ÅŸok kuvveti ise dÃ¼ÅŸÃ¼ÅŸ faktÃ¶rÃ¼, tÄ±rmanÄ±ÅŸÃ§Ä±nÄ±n aÄŸÄ±rlÄ±ÄŸÄ± ve kullanÄ±lan ipin tÃ¼rÃ¼ ile iliÅŸkilidir. Dinamik ipler esneyerek ÅŸoku emme Ã¶zellikleri sayesinde dÃ¼ÅŸÃ¼ÅŸ anÄ±nda tÄ±rmanÄ±ÅŸÃ§Ä±nÄ±n hissedeceÄŸi ÅŸoku Ã¶nemli Ã¶lÃ§Ã¼de azaltÄ±rlar.
 		  </p><p>
 		  <ul>
-		  <li>Olası en yüksek düşüş faktörü <b>2</b>'dir; teorik olarak hiçbir ara emniyet noktası olmaksızın doğurdan ana istasyonda düşmek demektir ki bu da ip üzerinde en çok gerilimi oluşturur. Kesinlikle müsade edilmemesi gereken bir durumdur !!! <br>
+		  <li>OlasÄ± en yÃ¼ksek dÃ¼ÅŸÃ¼ÅŸ faktÃ¶rÃ¼ <b>2</b>'dir; teorik olarak hiÃ§bir ara emniyet noktasÄ± olmaksÄ±zÄ±n doÄŸurdan ana istasyonda dÃ¼ÅŸmek demektir ki bu da ip Ã¼zerinde en Ã§ok gerilimi oluÅŸturur. Kesinlikle mÃ¼sade edilmemesi gereken bir durumdur !!! <br>
 		  <br>
-		  <li><b>1</b>'lik düşme faktörü orta seviyededir; teorik olarak ana istasyona kadar bir düşüşü temsil eder. Azami ölçüde kaçınılmalıdır ! <br>
+		  <li><b>1</b>'lik dÃ¼ÅŸme faktÃ¶rÃ¼ orta seviyededir; teorik olarak ana istasyona kadar bir dÃ¼ÅŸÃ¼ÅŸÃ¼ temsil eder. Azami Ã¶lÃ§Ã¼de kaÃ§Ä±nÄ±lmalÄ±dÄ±r ! <br>
 		  <br>
-		  <li><b>1</b>'den küçük düşme faktörü hafif sayılmaktadır; görece en güvenli düşüşleri temsil eder. <br>
+		  <li><b>1</b>'den kÃ¼Ã§Ã¼k dÃ¼ÅŸme faktÃ¶rÃ¼ hafif sayÄ±lmaktadÄ±r; gÃ¶rece en gÃ¼venli dÃ¼ÅŸÃ¼ÅŸleri temsil eder. <br>
 		  </ul>
 		  <br>
 		  </font></p>
@@ -81,7 +100,7 @@ form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*9
                 <table border="2" cellpadding="2">
                     <tbody><tr> 
                       <td> 
-                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Ağırlık: 
+                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">AÄŸÄ±rlÄ±k: 
                           </font></b></div>                      </td>
                       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
                         <input type="text" size="6" name="agirlik">
@@ -94,7 +113,7 @@ form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*9
                     </tr>
                     <tr> 
                       <td> 
-                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Açık ip boyu:</font></b></div>                      </td>
+                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">AÃ§Ä±k ip boyu:</font></b></div>                      </td>
                       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
                         <input type="text" size="6" name="ip_boyu">
                         </font></td>
@@ -106,7 +125,7 @@ form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*9
                     </tr>
                     <tr> 
                       <td> 
-                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Son emniyet noktasına uzaklık:</font></b></div>                      </td>
+                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Son emniyet noktasÄ±na uzaklÄ±k:</font></b></div>                      </td>
                       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
                         <input type="text" size="6" name="son_emn">
                         </font></td>
@@ -118,7 +137,7 @@ form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*9
                     </tr>
                     <tr> 
                       <td> 
-                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">İpin cinsi: </font></b></div>                      </td>
+                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Ä±pin cinsi: </font></b></div>                      </td>
                       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
                         <input type="radio" name="ip_turu">
                         Statik </font></td> 
@@ -128,7 +147,7 @@ form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*9
                     </tr>
 					<tr> 
                       <td>
-					    <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Düşüş faktörü:</font></b></td>
+					    <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">DÃ¼ÅŸÃ¼ÅŸ faktÃ¶rÃ¼:</font></b></td>
                       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
                         <input type="text" size="6" name="d_fak">
                         </font></td>
@@ -138,7 +157,7 @@ form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*9
                     </tr>
                     <tr> 
                       <td>
-					    <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Şok kuvveti (KN):</font></b></td>
+					    <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">ÅŸok kuvveti (KN):</font></b></td>
                       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
                         <input type="text" size="6" name="sok_kuv">
                         </font></td>
