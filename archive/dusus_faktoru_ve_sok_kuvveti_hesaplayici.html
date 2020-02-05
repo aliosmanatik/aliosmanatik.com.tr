@@ -22,155 +22,156 @@ umarım işinize yarar. -->
 <meta name="Rating" content="General">
 
 
-<style type="text/css">
-   h1 {
-   color: #666666;
-   text-decoration:none;
-   text-align:center;
-   }
-   p {
-   font-family: 'Arial Narrow', Arial, sans-serif;
-   padding: 10px;
-   padding-left: 20px;
-   }
-   a {
-   margin-left: 20px;
-   color: #666666;
-   text-decoration:none;
-   text-align:center;
-   }   
+<style>
+
+body {
+  background-color: #FFDDEE;
+  color: #666666;
+  margin: 100px;
+  text-decoration: none;
+  text-align: justify;
+  font-family: Arial, Helvetica;
+  font-size: 20px;
+}
+
+p {
+  color: #666666;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+a {
+  margin-left: 20px;
+  color: #666666;
+  text-decoration: none;
+  text-align: center;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border: 4px solid gray;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 24px;
+  height: 60px;
+}
+
+input[type=text] {
+  width: 100px;
+  padding: 12px 20px;
+  margin: 8px;
+  box-sizing: border-box;
+}
+
+input[type=button], input[type=reset] {
+  background-color: #CCAABB;
+  border: none;
+  color: #666666;
+  width: 120px;
+  padding: 10px 20px;
+  margin: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+}
 </style>
 </head>
 
-<body bgcolor="#FFDDEE" text="#000000" leftmargin="100" marginwidth="100">
+<body>
 
     <script language="JavaScript"><!--  eski tarayıcılardan gizleme başlangıcı
 
 function compute(form) {
-var agirlik=parseFloat(form.agirlik.value)
+  var agirlik=parseFloat(form.agirlik.value)
 var ip_boyu=parseFloat(form.ip_boyu.value)
 var son_emn=parseFloat(form.son_emn.value)
 form.d_fak.value=""
 form.sok_kuv.value=""
 
 if (form.birim_son_emn[0].checked==true) {
-   son_emn *= 0.3048
+   son_emn *= 0.3048;
 }
+
 if (form.birim_ip_boyu[0].checked==true) {
-  ip_boyu *= 0.3048
+  ip_boyu *= 0.3048;
 }
+
 if (form.birim_agirlik[0].checked==true) {
-    agirlik *= 0.45359237
+  agirlik *= 0.45359237;
 }
+
 if (son_emn>ip_boyu) {
-	alert("Açık ip boyu, son emniyet noktasına olan uzaklıktan az olamaz !!!") 
+  alert("Açık ip boyu, son emniyet noktasına olan uzaklıktan az olamaz !!!");
 }
+
 form.d_fak.value=(son_emn*2)/ip_boyu
 if (form.ip_turu[1].checked==true) {
-form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*4.5
+  form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*4.5;
 }
+
 else {
-form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*9
+  form.sok_kuv.value=agirlik/80*((son_emn+ip_boyu)/ip_boyu)*9;
 }
 }
-// eski tarayıcılardan gizleme sonu  -->
+//eski tarayıcılardan gizleme sonu  -->
 </script>
          
-<div align="center"> 
-        
-    <h1><b>*** Tırmanışçının şok kuvveti hesaplayıcısı ***</b></h1>
-		 <div align="left">
-          <p><font face="Arial, Helvetica, sans-serif" size="3">
+       
+    <h1 align="center"><b>*** Tırmanışçının şok kuvveti hesaplayıcısı ***</b></h1>
+		 <div>
+          <p>
 		  Bu hesaplayıcı ipin türüne, tırmanıcının ağırlığına, ve son emniyet noktasına olan mesafeye göre tırmanıcının karşılayacağı şok yükünü ve düşüş faktörünü hesaplar. 
 		  Düşüş faktörü, düşüş mesafesinin açık ip mesafesine oranıdır. 
 		  şok kuvveti ise düşüş faktörü, tırmanışçının ağırlığı ve kullanılan ipin türü ile ilişkilidir. Dinamik ipler esneyerek şoku emme özellikleri sayesinde düşüş anında tırmanışçının hissedeceği şoku önemli ölçüde azaltırlar.
-		  </p><p>
+		  </p>
 		  <ul>
-		  <li>Olası en yüksek düşüş faktörü <b>2</b>'dir; teorik olarak hiçbir ara emniyet noktası olmaksızın doğurdan ana istasyonda düşmek demektir ki bu da ip üzerinde en çok gerilimi oluşturur. Kesinlikle müsade edilmemesi gereken bir durumdur !!! <br>
+		  <li>Olası en yüksek düşüş faktörü <b>2</b> 'dir; teorik olarak hiçbir ara emniyet noktası olmaksızın doğurdan ana istasyonda düşmek demektir ki bu da ip üzerinde en çok gerilimi oluşturur. Kesinlikle müsade edilmemesi gereken bir durumdur !!! <br>
 		  <br>
-		  <li><b>1</b>'lik düşme faktörü orta seviyededir; teorik olarak ana istasyona kadar bir düşüşü temsil eder. Azami ölçüde kaçınılmalıdır ! <br>
+		  <li><b>1</b> 'lik düşme faktörü orta seviyededir; teorik olarak ana istasyona kadar bir düşüşü temsil eder. Azami ölçüde kaçınılmalıdır ! <br>
 		  <br>
-		  <li><b>1</b>'den küçük düşme faktörü hafif sayılmaktadır; görece en güvenli düşüşleri temsil eder. <br>
+		  <li><b>1</b> 'den küçük düşme faktörü hafif sayılmaktadır; görece en güvenli düşüşleri temsil eder. <br>
 		  </ul>
 		  <br>
 		  </font></p>
           </div>
-		  <form name="evalform">
-            
-                <table border="2" cellpadding="2">
-                    <tbody><tr> 
-                      <td> 
-                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Ağırlık: 
-                          </font></b></div>                      </td>
-                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
-                        <input type="text" size="6" name="agirlik">
-                        </font></td>
-                      <td><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
-                        <input type="radio" name="birim_agirlik" value="1">
-                        Pounds<br>
-                        <input type="radio" name="birim_agirlik" value="2">
-                        Kilogram</font></b></td>
+		  <div align="center">
+                <table>
+                    <tbody>
+					<tr>
+                      <td> Ağırlık  </td>
+                      <td> <input type="text" name="agirlik"> </td>
+                      <td> <input type="radio" name="birim_agirlik" value="1"> Pounds <br> <input type="radio" name="birim_agirlik" value="2"> Kilogram  </td>
                     </tr>
                     <tr> 
-                      <td> 
-                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Açık ip boyu:</font></b></div>                      </td>
-                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
-                        <input type="text" size="6" name="ip_boyu">
-                        </font></td>
-                      <td><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
-                        <input type="radio" name="birim_ip_boyu">
-                        Feet <br>
-                        <input type="radio" name="birim_ip_boyu" value="1">
-                        Metre </font></b></td>
+                      <td> Açık ip boyu  </td>
+                      <td> <input type="text" name="ip_boyu"> </td>
+                      <td> <input type="radio" name="birim_ip_boyu"> Feet <br> <input type="radio" name="birim_ip_boyu" value="1"> Metre  </td>
                     </tr>
                     <tr> 
-                      <td> 
-                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Son emniyet noktasına uzaklık:</font></b></div>                      </td>
-                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
-                        <input type="text" size="6" name="son_emn">
-                        </font></td>
-                      <td><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
-                        <input type="radio" name="birim_son_emn">
-                        Feet <br>
-                        <input type="radio" name="birim_son_emn" value="1">
-                        Metre </font></b></td>
+                      <td> Son emniyet noktasına uzaklık  </td>
+                      <td> <input type="text" name="son_emn">  </td>
+                      <td> <input type="radio" name="birim_son_emn"> Feet <br> <input type="radio" name="birim_son_emn" value="1"> Metre  </td>
                     </tr>
                     <tr> 
-                      <td> 
-                        <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">ıpin cinsi: </font></b></div>                      </td>
-                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
-                        <input type="radio" name="ip_turu">
-                        Statik </font></td> 
-                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">   
-						<input type="radio" name="ip_turu" value="1">
-                        Dinamik </font></td>
+                      <td> İpin cinsi  </td>
+                      <td> <input type="radio" name="ip_turu"> Statik  </td> 
+                      <td> <input type="radio" name="ip_turu" value="1"> Dinamik  </td>
                     </tr>
 					<tr> 
-                      <td>
-					    <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Düşüş faktörü:</font></b></td>
-                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
-                        <input type="text" size="6" name="d_fak">
-                        </font></td>
-						<td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
-                      <input type="button" value=" Hesapla " onclick="compute(this.form)">
-                      </font></td>
+                      <td> Düşüş faktörü </td>
+                      <td> <input type="text" name="d_fak">  </td>
+					  <td> <input type="button" value="Hesapla" onclick="compute(this.form)">
+                      </td>
                     </tr>
                     <tr> 
-                      <td>
-					    <div align="right"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">şok kuvveti (KN):</font></b></td>
-                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
-                        <input type="text" size="6" name="sok_kuv">
-                        </font></td>
-						<td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
-                      <input type="reset" value=" Temizle  ">
-                      </font></td>
+                      <td> Şok kuvveti (KN) </td>
+                      <td> <input type="text" name="sok_kuv">  </td>
+					  <td> <input type="reset" value="Temizle">
+                      </td>
                     </tr>
-					
-                  </tbody></table>
-            </div></div></div>
-           
-</form>
-</center>
+					</tbody>
+				</table>           
+            </div>
     
 </body>
 </html>
