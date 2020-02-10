@@ -115,11 +115,11 @@ $(window).load(function() {
 			navs:$('#bg_pagination').navs({
 				hoverIn:function(li){
 					$('span',li).stop().animate({opacity:1})
-					$('a',li).stop().animate({color:'#fff'})
+					$('a',li).stop().animate({color:'#ad2f00'})
 				},
 				hoverOut:function(li){
 					$('span',li).stop().animate({opacity:0})
-					$('a',li).stop().animate({color:'#ad2f00'})
+					$('a',li).stop().animate({color:'#fff'})
 				}	
 			})
 	}).sImg({
