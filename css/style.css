@@ -71,8 +71,8 @@ figure{ padding-top:3px; padding-bottom:0px;}
 .close{ position:absolute; background:url(../images/icons/close.gif) 0 0 no-repeat; width:13px; height:13px; top:20px; right:20px;}
 .close span{ width:100%; height:100%; background:url(../images/icons/close_active.gif) 0 0 no-repeat; display:block}
 
-#icons{ padding-top:8px;}
-#icons li{ float:left; margin-right:10px}
+#icons{ padding-top:50px;}
+#icons li{ float:left; margin-right:20px}
 #icons .first{ font-size:14px; margin-right:18px}
 #icons a{ position:relative; display:block}
 #icons .img_act{ position:absolute; top:0; left:0}
@@ -103,22 +103,6 @@ footer a:hover{ text-shadow:8px 0px 8px #ad2f00, -8px 0px 8px #ad2f00, 0px 4px 8
 #bg_pagination li{ float:left; margin-left:10px; border: 1px solid #ad2f00; border-radius: 5px;}
 #bg_pagination a{ position:relative; display:block; width:20px; height:20px; line-height:20px; text-align:center; text-decoration:none}
 
-/* ============================= forms ============================= */
-
-#ContactForm{ position:relative; padding-bottom:20px}
-#ContactForm .col1{ width:76px;}
-#ContactForm .wrapper{ overflow:inherit; min-height:25px;}
-#ContactForm .success{ display:none; position:absolute; bottom:0; line-height:20px}
-#ContactForm label{ position:relative;min-height:22px; display: inline-block;}
-#ContactForm .message{ height:206px;}
-#ContactForm .error, 
-#ContactForm .empty{ font-size:10px; color:#ad2f00; line-height:14px; display:none; width:100%}
-#ContactForm a{ margin-left:23px; float:right;}
-#ContactForm .input { margin:0;width:282px; height:16px; background: url(../images/icons/spacer.gif) repeat; padding:2px 10px;color:#323232; font:13px Arial, Helvetica, sans-serif;}
-#ContactForm textarea { overflow: auto; margin:0;resize:none;width:282px; height:197px; background: url(../images/icons/spacer.gif) repeat; padding:2px 10px;color:#323232; font:13px Arial, Helvetica, sans-serif;}
-#ContactForm  .bg{ background:#fff; border:1px solid #e5e5e5; position:relative;border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius:4px; display:inline-block; line-height:20px;}
-
-
 /* -------------------------- columns --------------------------*/
 
 .col1, .col2, .col3, .cols { float:left;}
@@ -126,4 +110,4 @@ footer a:hover{ text-shadow:8px 0px 8px #ad2f00, -8px 0px 8px #ad2f00, 0px 4px 8
 .col1{ width:380px;}
 .col2{ width:280px;}
 
-#page_Contacts .col2{ width:70px; }
+/* #page_Contacts .col2{ width:70px; } */
