@@ -54,7 +54,7 @@ header{ height:70px;}
 /* ============================= content ====================== */
 
 #content{ margin-top:30px; padding-bottom:90px; position:relative}
-#content > ul > li{ position:relative; background:url(../images/icons/bg_content.png) repeat; width:100%; overflow:hidden}
+#content > ul > li{ position:relative; background:url(../images/icons/bg_content.png) repeat; width:100%; overflow:hidden; text-align: justify;}
 
 .pad{ padding:60px; overflow:hidden}
 .pad_left1{ padding-left:60px}
