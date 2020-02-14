@@ -87,7 +87,7 @@ figure{ padding-top:3px; padding-bottom:0px;}
 .list1 a{ position:relative}
 .list1 span{ position:absolute; bottom:0; left:0; width:0; height:1px; background:#ad2f00}
 
-.google_map{width:380px; height:280px; padding-top:0; position:relative; background: #abcdef url(../images/icons/googleMap.jpg); margin-top:1px; margin-bottom:1px;}
+.google_map{width:380px; height:280px; padding-top:0; position:relative; margin-top:1px; margin-bottom:1px;}
 
 /* ============================= footer ====================== */
 
