@@ -32,7 +32,11 @@ body, html{ height:100%;}
 a{ color:#ad2f00; text-decoration: none; outline:none}
 /* a:hover{} */
 h1{ float:left}
-h2{ font:30px 'Asap', sans-serif; color:#ad2f00; line-height:1.2em; padding:2px 0 14px 0; letter-spacing:-2px;}
+h2{ font:30px 'Asap', sans-serif; color:#ad2f00; padding:2px 0 14px 0; letter-spacing:-2px;}
+.article-header {margin-bottom: 20px;}
+.article-header h2{display: inline;}
+.article-header span{ float: right; font:16px; color:#ad2f00; margin-top: 10px; letter-spacing:-1px;}
+
 p{ padding-bottom:25px;}
 strong{ color:#ad2f00}
 
