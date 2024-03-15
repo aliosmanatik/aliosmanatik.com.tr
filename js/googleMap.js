@@ -1,5 +1,5 @@
 $(window).load(function(){
-    var mapUrl = "http://maps.google.com/maps?f=q&amp;hl=tr&amp;t=p&amp;ll=41.1049724,29.0262496&amp;spn=0.073481,0.130119&amp;z=14&amp;output=embed",
+    var mapUrl = "http://maps.google.com/maps?f=q&amp;hl=tr&amp;t=p&amp;ll=36.8976477,30.6496917&amp;z=14&amp;output=embed",
         onLoadWebSite = true,
         googleMapHolder = $(".google_map"),
         backgroundColor = googleMapHolder.css("backgroundColor"),
@@ -10,7 +10,7 @@ $(window).load(function(){
         borderBottomLeftRadius = parseInt(googleMapHolder.css("borderTopLeftRadius")),
         borderBottomRightRadius = parseInt(googleMapHolder.css("borderTopLeftRadius")),
         addMap=false;
-	    
+    
     if(backgroundColor == "rgba(0, 0, 0, 0)"){
         backgroundColor= "#ffffff";
     }
@@ -24,8 +24,8 @@ $(window).load(function(){
         	if(idPage != "#"){
 				if(googleMapHolder.parents(idPage).length != 0){
 	                addGoogleMapHandler();
-       			}	
-        	}
+       			}
+            }
         }else{
             addGoogleMapHandler();
         }
@@ -40,7 +40,7 @@ $(window).load(function(){
         }
     }
     function googleMapLoadCompleteHandler(){
-    	var loaderPart = googleMapHolder.find("#loaderPart");
+        var loaderPart = googleMapHolder.find("#loaderPart");
         loaderPart.delay(100).fadeOut(500, function(){loaderPart.css({"display":"none"});});
     }
 })

@@ -18,7 +18,7 @@ body{ background:#cb610c; border:0; font:13px Arial, Helvetica, sans-serif; colo
 
 /* Global Structure ============================================================= */
 
-.main {	margin: 0 auto;	width: 940px; }
+.main {	margin: 0 auto;	width: 720px; }
 
 #bgStretch {overflow:hidden;z-index:-1; position:fixed}
 .spinner {width:100%;height:100%;position: fixed;z-index:0;left:0;top:0;background: url(../images/icons/ajax-loader.gif) center center no-repeat;}
@@ -43,28 +43,27 @@ strong{ color:#ad2f00}
 /* ============================= header ====================== */
 header{ height:70px;}
 
-#logo{ display:block; float:left; text-indent:-9999px; background:url(../images/icons/magnet.png) 0 0 no-repeat; margin-top:40px; margin-left:-240px;width:140px; height:200px;}
-.menu { float:right; padding-top:30px}
-#menu > li { float:left; margin-right:30px;position:relative;}
-#menu > li > a{ display:block; font:17px 'Asap', sans-serif; color:#fff; text-shadow:1px 1px rgba(0,0,0,.5)}
-/* #menu > li > a:hover,  */
-/* #menu > .active > a{ } */
+/*#logo{ display:block; float:left; text-indent:-9999px; background:url(../images/icons/magnet.png) 0 0 no-repeat; margin-top:40px; margin-left:-240px;width:140px; height:200px;}*/
 
-.submenu_1{ position:absolute; z-index:5; top:30px; left:-20px; width:120px; background: rgb(223, 223, 223); background: rgba(255, 255, 255, 0.9); padding:10px 0;}
-.submenu_1 li{ position:relative;}
-.submenu_1 span{ position: absolute; width:100%; height:100%; top:0; left:0; background:rgb(196, 196, 196)}
-.submenu_1 a{ display:block; font:14px 'Asap', sans-serif;  line-height:30px; color:#ad2f00; position:relative; text-align:center}
+.menu { display: flex; justify-content: center; padding-top:30px; margin-bottom:30px}
+
+#menu_li > li { float:left; padding: 20px; position:relative;}
+#menu_li > li > a{ display:block; font:22px 'Asap', sans-serif; color:#fff; text-shadow:1px 1px rgba(0,0,0,.5)}
 
 /* ============================= content ====================== */
 
 #content{ margin-top:30px; padding-bottom:90px; position:relative}
 #content > ul > li{ position:relative; background:url(../images/icons/bg_content.png) repeat; width:100%; overflow:hidden; text-align: justify;}
 
-.pad{ padding:60px; overflow:hidden}
+#hobilerim{margin-top:30px; margin-bottom:30px;  }
+
+.pad{padding-top:40px; padding-left:60px; padding-right:60px; padding-bottom:40px;overflow:hidden}
 .pad_left1{ padding-left:60px}
 .pad_bot1{ padding-bottom:15px;}
 .marg_right1{ margin-right:20px}
 .marg_left_1{ margin-left:120px}
+
+.marg_tb_20{ margin-top:20px; margin-bottom:20px}
 
 figure{ padding-top:3px; padding-bottom:0px;}
 #page_Services figure{ padding-top:0}
@@ -106,12 +105,3 @@ footer a:hover{ text-shadow:8px 0px 8px #ad2f00, -8px 0px 8px #ad2f00, 0px 4px 8
 #bg_pagination span{ position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/icons/buttons_active.gif) 0 0 no-repeat} */
 #bg_pagination li{ float:left; margin-left:10px; border: 1px solid #ad2f00; border-radius: 5px;}
 #bg_pagination a{ position:relative; display:block; width:20px; height:20px; line-height:20px; text-align:center; text-decoration:none}
-
-/* -------------------------- columns --------------------------*/
-
-.col1, .col2, .col3, .cols { float:left;}
-
-.col1{ width:380px;}
-.col2{ width:280px;}
-
-/* #page_Contacts .col2{ width:70px; } */
