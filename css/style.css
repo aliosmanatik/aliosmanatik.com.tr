@@ -46,7 +46,7 @@ header{ height:70px;}
 /*#logo{ display:block; float:left; text-indent:-9999px; background:url(../images/icons/magnet.png) 0 0 no-repeat; margin-top:40px; margin-left:-240px;width:140px; height:200px;}*/
 
 .menu { display: flex; justify-content: center; padding-top:30px; margin-bottom:30px}
-
+#menu_li {display: flex;  list-style: none}
 #menu_li > li { float:left; padding: 20px; position:relative;}
 #menu_li > li > a{ display:block; font:22px 'Asap', sans-serif; color:#fff; text-shadow:1px 1px rgba(0,0,0,.5)}
 
