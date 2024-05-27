@@ -18,7 +18,7 @@
                 const data = await response.json();
                 const listContainer = document.getElementById('file-list');
                 data.forEach(item => {
-                    if (item.type === 'file') {
+                    if (item.type === 'file' && item.name !== 'index.html') {
                         const listItem = document.createElement('li');
                         const link = document.createElement('a');
                         // Doğru URL'yi oluşturun
