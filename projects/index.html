@@ -21,7 +21,8 @@
                     if (item.type === 'file') {
                         const listItem = document.createElement('li');
                         const link = document.createElement('a');
-                        link.href = item.download_url;
+                        // Doğru URL'yi oluşturun
+                        link.href = `https://${username}.github.io/${repo}/${directory}/${item.name}`;
                         link.textContent = item.name;
                         listItem.appendChild(link);
                         listContainer.appendChild(listItem);
