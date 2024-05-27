@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects Directory</title>
+    <script>
+        async function fetchDirectoryContents() {
+            const username = 'aliosmanatik'; // GitHub kullanıcı adınızı buraya yazın
+            const repo = 'aliosmanatik.com.tr'; // GitHub depo adınızı buraya yazın
+            const directory = 'projects'; // Dizin yolunu buraya yazın
+            const url = `https://api.github.com/repos/${username}/${repo}/contents/${directory}`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                const listContainer = document.getElementById('file-list');
+                data.forEach(item => {
+                    if (item.type === 'file') {
+                        const listItem = document.createElement('li');
+                        const link = document.createElement('a');
+                        link.href = item.download_url;
+                        link.textContent = item.name;
+                        listItem.appendChild(link);
+                        listContainer.appendChild(listItem);
+                    }
+                });
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchDirectoryContents);
+    </script>
+</head>
+<body>
+    <h1>Projects Directory</h1>
+    <ul id="file-list">
+        <!-- Dosya listesi buraya eklenecek -->
+    </ul>
+</body>
+</html>
