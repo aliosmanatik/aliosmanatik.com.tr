@@ -3,6 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Projects Directory</title>
+	    <style>
+        body {
+            background-color: #f0f0f0; /* Arkaplan rengi */
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2em; /* Başlık büyüklüğü */
+            text-align: center;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none; /* Noktaları kaldırma */
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            text-align: center;
+        }
+        a {
+            text-decoration: none; /* Alt çizgiyi kaldırma */
+            font-size: 1.2em; /* Link büyüklüğü */
+            color: #0073e6; /* Link rengi */
+        }
+        a:hover {
+            color: #005bb5; /* Linkin üzerine gelindiğinde renk değişimi */
+        }
+    </style>
     <script>
         async function fetchDirectoryContents() {
             const username = 'aliosmanatik'; // GitHub kullanıcı adınızı buraya yazın
